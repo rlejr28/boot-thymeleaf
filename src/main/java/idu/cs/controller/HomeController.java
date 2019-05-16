@@ -70,7 +70,7 @@ public class HomeController {
 		user.setCompany(userDetails.getCompany());
 	    User userUpdate = userRepo.save(user); // 객체 삭제 -> jpa : record 삭제로 적용
 	    
-	    return ResponseEntity.or(userUpdate);
+	    return ResponseEntity.ok(userUpdate);
 	   }
 	@DeleteMapping("/users/{id}")
 	//@RequestMapping(value=""/users/{id}" method=RequestMethod.DELETE)
